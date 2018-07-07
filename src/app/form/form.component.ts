@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
 import {UserService} from '../services/user.service';
 import {UserData} from '../interfaces/user-data';
 
@@ -10,7 +9,7 @@ import {UserData} from '../interfaces/user-data';
 })
 export class FormComponent implements OnInit {
 
-  users: UserData[];
+  private users: UserData[];
   user: UserData;
 
   constructor(private data: UserService) {
@@ -23,13 +22,10 @@ export class FormComponent implements OnInit {
         this.user = this.users[this.getRandom()];
       }
     );
-
   }
 
   private getRandom(): number {
     const random = Math.floor((Math.random() * this.users.length));
     return random;
   }
-
-
 }
