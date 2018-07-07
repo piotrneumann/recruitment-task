@@ -5,6 +5,12 @@
   padding: 50px;
 }
 
+@media (min-width: 570px) {
+  .container{
+    max-width: 570px;
+  }
+}
+
 p {
   color: #d5fcfe;
   font-size: 30px;
@@ -31,6 +37,7 @@ input {
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #a1adb7;
+  color: #4fa582;
 }
 
 span {
@@ -48,4 +55,8 @@ span {
 .my-paddig {
   padding-right: 15px;
   padding-left: 15px;
+}
+input::-webkit-input-placeholder:after {
+  content: ' *';
+  color: #4fa582;
 }

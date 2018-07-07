@@ -1,6 +1,5 @@
 <div class="container conteiner-form">
   <form>
-
     <div class="my-paddig">
       <div class="row no-gutters">
         <div class="col-sm-6 form-group my-4">
@@ -20,27 +19,36 @@
 
     <div class="row">
       <div class="col-sm-6 form-group my-4">
-        <input type="text" class="form-control" required placeholder="First Name *">
+        <input type="text"
+               class="form-control"
+               required placeholder="First Name"
+               value="{{user?.name.split(' ')[0]}}">
         <span class="glyphicon glyphicon-download-alt form-control-feedback"></span>
       </div>
 
       <div class="col-sm-6 form-group my-4">
-        <input type="text" class="form-control" required placeholder="Last Name *">
+        <input type="text"
+               class="form-control"
+               required placeholder="Last Name"
+               value="{{user?.name.split(' ')[1]}}">
       </div>
 
       <div class="col-sm-12 form-group my-4">
-        <input type="text" class="form-control" required placeholder="Email Address *">
+        <input type="text"
+               class="form-control"
+               required placeholder="Email Address"
+               value="{{user?.email}}">
       </div>
 
       <div class="col-sm-12 form-group my-4">
-        <input type="password" class="form-control" required placeholder="Set A Password *">
+        <input type="password" class="form-control" required placeholder="Set A Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
 
       <div class="col-sm-12 my-4">
         <button type="button" class="btn btn-success btn-lg">GET STARTED</button>
       </div>
-    </div>
 
+    </div>
   </form>
 </div>
